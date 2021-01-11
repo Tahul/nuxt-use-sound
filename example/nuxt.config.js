@@ -1,12 +1,14 @@
 export default {
   buildModules: ['@nuxtjs/composition-api'],
   modules: ['../src/module.ts'],
-  sounds: [
-    {
-      name: 'back',
-      src: '/back.wav'
+  sounds: {
+    back: {
+      src: '/back.wav',
+      options: {
+        volume: 0.1
+      }
     }
-  ],
+  },
   build: {
     extend (config) {
       config.module.rules.push({

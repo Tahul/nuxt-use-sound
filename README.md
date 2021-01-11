@@ -6,7 +6,7 @@ For a better understanding of this module, you might want take a look at the ori
 
 ## Setup
 
-In order to use this project, you must have [@nuxt/composition-api](https://composition-api.nuxtjs.org/) setup in your project.
+In order to use this module, you must have [@nuxt/composition-api](https://composition-api.nuxtjs.org/) setup in your project.
 
 Once you installed it, add `nuxt-use-sound` dependency to your project
 

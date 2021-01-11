@@ -11,22 +11,26 @@ export type Sound = {
   options: ComposableOptions;
 };
 
-const DEFAULTS: Sound[] = []
+export interface ModuleOptions {
+  [K: string]: Sound
+}
+
+const DEFAULTS: ModuleOptions = {}
 
 const CONFIG_KEY = 'sounds'
 
-const nuxtModule: Module<Sound[]> = function (sounds) {
-  const options = defu<Sound[]>(this.options[CONFIG_KEY], sounds, DEFAULTS)
+const nuxtModule: Module<ModuleOptions> = function (sounds) {
+  const options = defu<ModuleOptions>(this.options[CONFIG_KEY], sounds, DEFAULTS)
 
   this.addTemplate({
-    fileName: 'nuxt-use-sound/options.js',
+    fileName: 'sounds.js',
     src: resolve(__dirname, '../templates', 'options.js'),
     options
   })
 
   this.addPlugin({
     src: resolve(__dirname, '../templates', 'plugin.js'),
-    fileName: 'nuxt-use-sound/plugin.js'
+    fileName: 'nuxt-use-sound.js'
   })
 };
 
@@ -34,13 +38,15 @@ const nuxtModule: Module<Sound[]> = function (sounds) {
 
 declare module '@nuxt/types' {
   interface NuxtConfig {
-    [CONFIG_KEY]?: Sound[];
+    [CONFIG_KEY]?: ModuleOptions;
   } // Nuxt 2.14+
   interface Configuration {
-    [CONFIG_KEY]?: Sound[];
+    [CONFIG_KEY]?: ModuleOptions;
   } // Nuxt 2.9 - 2.13
   interface Context {
-    $sounds: ExposedData[];
+    $sounds: {
+      [K: string]: ExposedData
+    };
   }
 }
 

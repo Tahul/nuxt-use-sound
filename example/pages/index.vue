@@ -1,5 +1,5 @@
 <template>
-  <button @click="$sounds.back">
+  <button @click="$sounds.back.play">
     Boop!
   </button>
 </template>

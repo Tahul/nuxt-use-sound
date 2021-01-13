@@ -11637,10 +11637,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue-use-sound@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/vue-use-sound/-/vue-use-sound-1.0.9.tgz#403d848f8ea8462a6a8b019c1dd6a0933c5567bf"
-  integrity sha512-lt0d6TQh403fLnuyD4dXYG9A84saAZ99hKZ2tMx/BFkiW8ucMKThY5MOE6hRzUkx+qtufx81Qc9dAz0RxFPN3A==
+vue-use-sound@latest:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-use-sound/-/vue-use-sound-1.1.1.tgz#7f60b3eb7c4a408ae8ee913d3b9d8f14dbe7061d"
+  integrity sha512-UEW061trZVkLZIt5YJLDb16Lcho8aLj+ZhIzA6Fk66kEYtlxEinoE1NI0L+duk/DscwIzyXi8L2qDpiXtXJOjw==
   dependencies:
     howler "^2.2.1"
     vue-demi "^0.6.0"

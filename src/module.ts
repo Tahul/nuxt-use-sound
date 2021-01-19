@@ -1,10 +1,9 @@
 import { Module } from '@nuxt/types'
+import {
+  ComposableOptions, ReturnedValue
+} from '@vueuse/sound/dist/esm/src/types'
 import defu from 'defu'
 import { resolve } from 'path'
-import {
-  ComposableOptions,
-  ExposedData
-} from 'vue-use-sound/dist/esm/src/types'
 
 export type Sound = {
   src: string;
@@ -45,7 +44,7 @@ declare module '@nuxt/types' {
   } // Nuxt 2.9 - 2.13
   interface Context {
     $sounds: {
-      [K: string]: ExposedData
+      [K: string]: ReturnedValue
     };
   }
 }

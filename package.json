@@ -34,7 +34,7 @@
     "@nuxtjs/composition-api": "^0.18.0",
     "@nuxtjs/vendor": "^1.1.7",
     "defu": "^2.0.4",
-    "vue-use-sound": "latest"
+    "@vueuse/sound": "latest"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",

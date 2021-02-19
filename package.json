@@ -1,7 +1,7 @@
 {
   "name": "nuxt-use-sound",
-  "version": "1.0.3",
-  "description": "🔊🔊 A Nuxt module for playing sound effects.",
+  "version": "1.0.4",
+  "description": "🔊 A Nuxt module for playing sound effects.",
   "keywords": [
     "nuxt",
     "module",

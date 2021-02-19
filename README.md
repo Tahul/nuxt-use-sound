@@ -1,8 +1,8 @@
 # 🔊 nuxt-use-sound
 
-This module is a **Nuxt** implementation of the Vue composable [**vue-use-sound**](https://github.com/Tahul/vue-use-sound).
+This module is a **Nuxt** implementation of the Vue composable [**@vueuse/sound**](https://github.com/vueuse/sound).
 
-For a better **understanding** of this **module**, you should check out the original [**composable page**](https://github.com/Tahul/vue-use-sound).
+For a better **understanding** of this **module**, you should check out the original [**composable page**](https://github.com/vueuse/sound).
 
 ## Setup
 
@@ -28,18 +28,18 @@ Configure your sounds 🥁
 ```js
 {
   // nuxt.config.js
-  sounds: [
-    (back: {
+  sounds: {
+    back: {
       src: "/back.wav",
       options: {
         volume: 0.25
       }
-    })
-  ];
+    }
+  };
 }
 ```
 
-The rest of the documentation is available on the [**original composable repository**](https://github.com/Tahul/vue-use-sound).
+The rest of the documentation is available on the [**original composable repository**](https://github.com/vueuse/sound).
 
 ## Usage
 

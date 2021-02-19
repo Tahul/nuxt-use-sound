@@ -1,6 +1,9 @@
 import { useSound } from '@vueuse/sound'
 import options from './sounds'
 
+/**
+ * @type {import('@nuxt/types').Plugin}
+ */
 export default ({app}, inject) => {
   const $sounds = {}
 

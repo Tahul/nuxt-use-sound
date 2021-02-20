@@ -6,7 +6,7 @@ For a better **understanding** of this **module**, you should check out the orig
 
 ## Setup
 
-In order to use this module, you must have [@nuxt/composition-api](https://composition-api.nuxtjs.org/) setup in your project.
+In order to use this module, you must have [@nuxt/composition-api](https://composition-api.nuxtjs.org) setup in your project.
 
 Once you installed it, add `nuxt-use-sound` dependency to your project
 
@@ -19,7 +19,7 @@ Add `nuxt-use-sound` to the `modules` section of `nuxt.config.js`
 ```js
 {
   // nuxt.config.js
-  modules: ["nuxt-use-sound"];
+  modules: ['nuxt-use-sound']
 }
 ```
 
@@ -67,6 +67,6 @@ Just note that no sound can be played before the user has clicked the page, this
 
 ## Credits
 
-This package comes from [**vue-use-sound**](https://github.com/Tahul/vue-use-sound), a package inspired by the React hook, [**useSound**](https://github.com/joshwcomeau/use-sound).
+This package comes from [**@vueuse/sound**](https://github.com/vueuse/sound), a package inspired by the React hook, [**useSound**](https://github.com/joshwcomeau/use-sound).
 
 All the credit behind this idea goes to [**Josh W. Comeau**](https://github.com/joshwcomeau).

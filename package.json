@@ -25,14 +25,14 @@
   ],
   "scripts": {
     "build": "siroc build",
-    "dev": "nuxt-ts example",
+    "dev": "nuxt example",
     "lint": "eslint --ext .js,.ts,.vue .",
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "latest",
-    "@nuxtjs/vendor": "latest",
     "@vueuse/sound": "latest",
+    "@nuxtjs/composition-api": "^0.20.2",
+    "vue-demi": "^0.6.0",
     "defu": "^2.0.4"
   },
   "devDependencies": {

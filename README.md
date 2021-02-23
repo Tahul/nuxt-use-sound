@@ -11,7 +11,9 @@ In order to use this module, you must have [@nuxt/composition-api](https://compo
 Once you installed it, add `nuxt-use-sound` dependency to your project
 
 ```bash
-yarn add nuxt-use-sound
+yarn add --dev nuxt-use-sound
+# or
+npm i -D nuxt-use-sound
 ```
 
 Add `nuxt-use-sound` to the `modules` section of `nuxt.config.js`
@@ -19,7 +21,7 @@ Add `nuxt-use-sound` to the `modules` section of `nuxt.config.js`
 ```js
 {
   // nuxt.config.js
-  modules: ['nuxt-use-sound']
+  buildModules: ['nuxt-use-sound']
 }
 ```
 
@@ -27,15 +29,13 @@ Configure your sounds 🥁
 
 ```js
 {
-  // nuxt.config.js
-  sounds: {
-    back: {
-      src: "/back.wav",
-      options: {
-        volume: 0.25
-      }
+  // app/sound.config.js
+  back: {
+    src: "/back.wav",
+    options: {
+      volume: 0.25
     }
-  };
+  }
 }
 ```
 

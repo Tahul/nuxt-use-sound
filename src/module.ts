@@ -1,5 +1,5 @@
-import { Module } from '@nuxt/types'
-import {
+import type { Module } from '@nuxt/types'
+import type {
   ComposableOptions,
   ReturnedValue
 } from '@vueuse/sound/dist/esm/src/types'
@@ -17,26 +17,29 @@ export interface ModuleOptions {
 
 const DEFAULTS: ModuleOptions = {}
 
-const CONFIG_KEY = 'sounds'
+const CONFIG_KEY = 'sound'
 
-const nuxtModule: Module<ModuleOptions> = function(sounds) {
+const nuxtModule: Module<ModuleOptions> = async function(moduleOptions) {
   const options = defu<ModuleOptions>(
     this.options[CONFIG_KEY],
-    sounds,
+    moduleOptions,
     DEFAULTS
   )
 
   this.addTemplate({
-    fileName: 'sounds.js',
-    src: resolve(__dirname, '../templates', 'options.js'),
+    fileName: 'sound.config.js',
+    src: resolve(__dirname, '../templates', 'sound.config.js'),
     options
   })
 
   this.addPlugin({
-    src: resolve(__dirname, '../templates', 'plugin.js'),
-    fileName: 'nuxt-use-sound.js'
+    src: resolve(__dirname, '../templates', 'sound.js'),
+    fileName: 'sound.js',
   })
+
+  await this.addModule('@nuxtjs/composition-api')
 }
+
 ;(nuxtModule as any).meta = require('../package.json')
 
 declare module '@nuxt/types' {

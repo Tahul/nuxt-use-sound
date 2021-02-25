@@ -30,10 +30,10 @@
     "release": "yarn build && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
-    "@vueuse/sound": "latest",
     "@nuxtjs/composition-api": "^0.20.2",
-    "vue-demi": "^0.6.0",
-    "defu": "^2.0.4"
+    "@vueuse/sound": "latest",
+    "defu": "^3.2.2",
+    "vue-demi": "^0.6.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",

@@ -20,22 +20,24 @@ const DEFAULTS: ModuleOptions = {}
 const CONFIG_KEY = 'sound'
 
 const nuxtModule: Module<ModuleOptions> = async function(moduleOptions) {
-  const options = defu<ModuleOptions>(
-    this.options[CONFIG_KEY],
+  const options: ModuleOptions = defu(
+    this.options[CONFIG_KEY]!,
     moduleOptions,
     DEFAULTS
   )
 
   this.addTemplate({
     fileName: 'sound.config.js',
-    src: resolve(__dirname, '../templates', 'sound.config.js'),
-    options
+    src: resolve(__dirname, '../templates', 'sound.config.js')
   })
 
   this.addPlugin({
     src: resolve(__dirname, '../templates', 'sound.js'),
     fileName: 'sound.js',
+    options
   })
+
+  this.nuxt.options.build.transpile.push('defu')
 
   await this.addModule('@nuxtjs/composition-api')
 }

@@ -1,11 +1,13 @@
 import { useSound } from '@vueuse/sound'
-import userOptions from './sound.config'
+import defu from 'defu'
+import appOptions from './sound.config'
+
+const options = defu(appOptions, <%= JSON.stringify(options, null, 2) %>)
 
 /**
  * @type {import('@nuxt/types').Plugin}
  */
 export default async ({ app }, inject) => {
-  const options = Object.assign(<%= JSON.stringify(options) %>, userOptions)
 
   const $sounds = {}
 

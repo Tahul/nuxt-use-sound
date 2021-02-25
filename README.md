@@ -19,8 +19,8 @@ npm i -D nuxt-use-sound
 Add `nuxt-use-sound` to the `modules` section of `nuxt.config.js`
 
 ```js
+// nuxt.config.js
 {
-  // nuxt.config.js
   buildModules: ['nuxt-use-sound']
 }
 ```
@@ -28,12 +28,14 @@ Add `nuxt-use-sound` to the `modules` section of `nuxt.config.js`
 Configure your sounds 🥁
 
 ```js
+// nuxt.config.js
 {
-  // app/sound.config.js
-  back: {
-    src: "/back.wav",
-    options: {
-      volume: 0.25
+  sound: {
+    back: {
+      src: "/back.wav",
+      options: {
+        volume: 0.25
+      }
     }
   }
 }
